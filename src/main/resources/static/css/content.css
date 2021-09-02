@@ -1,0 +1,240 @@
+ @charset "utf-8";
+
+/*
+---------------
+-all
+---------------
+*/
+input{padding-left:10px;padding-right:10px}
+.customAlert{top:calc(50% - 150px);top:-webkit-calc(50% - 150px);top:-moz-calc(50% - 150px)}
+
+.blueButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#1d8de4;color:#fff;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.blueButton:hover{background:#000}
+.blueButton:active{background:#444;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+
+.grayButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#ccc;color:#000;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.grayButton:hover{background:#000;color:#fff}
+.grayButton:active{background:#444;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+
+.titleArea{position:relative;width:100%;height:100px;background:#fff}
+.titleArea p{float:left;width:auto;height:100px;line-height:100px;color:#000;font-size:20px;font-weight:bold;padding-left:26px}
+.titleArea .writeButton{float:left;width:auto;height:36px;background:#fff;outline:none;color:#4c4c4c;font-size:15px;;padding-left:14px;padding-right:14px;border:1px solid #4c4c4c;border-radius:18px;-webkit-border-radius:18px;-moz-border-radius:18px;margin-top:32px;margin-left:20px}
+.titleArea .writeButton:hover{border-color:#000;color:#000}
+.titleArea .writeButton:active{background:#eee}
+
+.contentBackgroundArea{position:relative;width:100%;height:100vh;background:#f0f0f0;overflow-y:scroll;overflow-x:hidden}
+.contentArea{position:relative;width:100%;min-width:1000px}
+
+.commonRound{background:#fff;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.commonBoxShadow{box-shadow:1px 1px 1px #ccc;-webkit-box-shadow:1px 1px 1px #ccc;-moz-box-shadow:1px 1px 1px #ccc}
+
+.listArea{width:100%;min-width:1000px}
+.pageTypeArea{position:relative;width:100%;height:40px;background:#fff;margin:20px 0 0 0}
+.pageTypeArea h1{float:left;margin:0 0 0 10px;padding:0;height:40px;line-height:40px;font-size:20px;font-weight:bold}
+.newButton{float:right;height:28px;margin:6px 6px 0 0;padding-left:10px;padding-right:10px;cursor:pointer;color:#fff;font-size:12px}
+
+.searchArea{position:relative;width:100%;min-width:1000px;margin:0 20px 0 0;padding-top:0}
+.mainSearchContainer{position:relative;width:100%;height:156px;margin:0}
+.subSearchContainer{position:relative;width:100%;height:76px;margin:0;background:#fff}
+.searchButton{position:absolute;right:20px;top:24px;width:130px;height:100px}
+
+.checkGroupArea{position:absolute;left:20px;top:18px;height:40px}
+
+
+.searchDateSelectArea{position:absolute;left:20px;top:0}
+.searchDateInput{position:absolute;cursor:pointer;left:120px;top:24px;border:1px solid #ccc;width:140px;height:40px;font-size:14px;color:#000;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
+.searchStartDateInput{left:170px}
+.searchEndDateInput{left:350px}
+
+.searchTimeButton{position:absolute;top:24px;width:88px;height:40px;background:#fff;border:1px solid #c1c1c1;font-size:14px;color:#000;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.searchTimeButton:hover{background:#f5f5f5}
+.searchTimeButton:active{border-color:#000;background:#ddd;color:#222}
+.searchTimeButton2{left:499px}
+.searchTimeButton3{left:590px}
+.searchTimeButton4{left:680px}
+
+.searchDatePeriod{position:absolute;left:313px;top:0;width:30px;height:84px;line-height:84px;text-align:center;font-size:20px;color:#444}
+
+.tableTopButton{float:right;margin-top:10px;height:28px;margin-right:4px;background:#fff;font-size:12px;padding-left:10px;padding-right:10px}
+.tableTopButton:hover{border-color:#666}
+.tableTopButton:active{border-color:#444;background:#f5f5f5}
+
+.dateRemoveButton{display:none;position:absolute;top:34px;width:20px;height:20px;background:#444;color:#fff;font-size:10px;padding:0;border-radius:16px;-webkit-border-radius:16px;-moz-border-radius:16px;border:1px solid #666;outline:0}
+.dateRemoveButton:hover{background:#555}
+.dateRemoveButton:active{background:#777}
+.startDateRemoveButton{left:282px}
+.endDateRemoveButton{left:462px}
+
+.commonSelectBackgroundArea{float:left;height:50px;margin:10px 0 0 10px}
+.commonSelectArea{position:relative;float:left;width:140px;height:40px;overflow:hidden;background:#fff;padding:0;border:1px solid #ccc;margin:24px 0 0 0;cursor:pointer;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
+.commonSelectArea:hover{border-color:#1d8de4}
+.commonSelectArea select{position:absolute;float:left;padding:0;width:100%;height:100%;padding-left:10px;font-size:14px;color:#000;cursor:pointer}
+.commonSelectArea select:focus{outline:0}
+.commonSelectArea img{position:absolute;right:8px;top:15px;width:10px;height:5px;object-fit:contain}
+
+.viewCountArea{position:absolute;right:20px}
+.viewCountArea .commonSelectArea{margin-top:18px}
+
+
+.searchCommonTypeArea{position:absolute;left:20px;top:60px}
+.searchTextInput{position:absolute;cursor:pointer;left:160px;top:84px;width:208px;height:40px;font-size:14px;color:#000;border:1px solid #ccc;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
+.searchTextInput:focus{border-color:#1d8de4}
+
+.tableHorizontalScrollArea{position:relative;width:100%;overflow-x:scroll}
+.tableArea{width:auto;overflow:hidden;min-height:465px;min-width:1000px;margin-top:20px;margin-left:20px;border-collapse:collapse}
+.tableArea table{width:100%;margin:0;padding:0;border-collapse:collapse;background:#fff;border-bottom:1px solid #5f72a4}
+.tableArea tr{width:100%;min-height:50px;border-bottom:1px solid #ddd}
+.tableArea td{height:50px;min-height:50px;text-align:center;font-size:13px}
+.tableArea th{position:relative;height:50px;background:#dfdfdf;font-size:14px;font-weight:bold;margin:10px 0 0 0;color:#000;text-align:center;cursor:pointer;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
+.tableArea .titleTr{margin-top:30px}
+
+.tableArea .checkTh{position:relative;min-width:40px}
+.tableArea .checkTd{position:relative;min-width:40px}
+.tableArea .check{position:absolute;left:10px;top:calc(50% - 10px);top:-webkit-calc(50% - 10px);top:-moz-calc(50% - 10px);width:20px;height:20px;background-image:url("../images/btn_check.png");background-size:contain}
+.tableArea .checkPress{background-image:url("../images/btn_check_pressed.png");background-size:contain}
+.commonTr{cursor:pointer}
+
+.tableArea .titleTr{margin-top:30px}
+.commonTr{cursor:pointer}
+
+.tableBottomArea{position:relative;width:1040px;height:78px;background:#fff;margin:20px 0 0 0}
+.tableBottomArea h4{float:left;font-size:14px;color:#444;height:78px;line-height:78px;margin:0 0 0 20px;padding:0}
+.pagingButtonArea{position:absolute;right:0;top:0;float:right;width:342px;height:30px;margin:24px 10px 0 0}
+.pagingButton{float:right;width:30px;height:30px;margin:0 3px 0 3px;background:#444;color:#fff;border:none;display:none;cursor:pointer;border-radius:30px;-webkit-border-radius:30px;-moz-border-radius:30px}
+.pagingButton:hover{opacity:0.8}
+.pagingButton:active{opacity:0.6}
+.pagingSelect{background:#1d8de4;color:#fff}
+.pagingButtonArea .next{background:#60b0ec;font-size:12px}
+.pagingButtonArea .nextnext{background:#97cbf2;font-size:12px}
+.pagingButtonArea .prev{background:#60b0ec;font-size:12px}
+.pagingButtonArea .prevprev{background:#97cbf2;font-size:12px}
+
+.dummyBottom{position:relative;width:100%;height:170px}
+
+
+.switchArea{cursor:pointer;position:absolute;left:0;top:0;width:56px;height:30px;background:#ccc;border-radius:30px;-webkit-border-radius:30px;-moz-border-radius:30px;transition:.3s;-webkit-transition:.3s;-moz-transition:.3s}
+.switchArea .circle{position:absolute;left:2px;top:2px;width:26px;height:26px;background:#fff;border-radius:26px;-webkit-border-radius:26px;-moz-border-radius:26px;transition:.3s;-webkit-transition:.3s;-moz-transition:.3s}
+.switchArea p{position:absolute;left:28px;top:0;width:26px;height:30px;line-height:30px;color:#999;font-size:10px;text-align:center}
+.switchAreaOn{background:#1d8de4}
+.switchAreaOn .circle{left:28px}
+.switchAreaOn p{left:2px;color:#fff}
+
+.rectSwitchArea{position:relative;width:44px;height:24px;background:#ccc;cursor:pointer;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;transition:.3s;-webkit-transition:.3s;-moz-transition:.3s}
+.rectSwitchArea .rect{position:absolute;left:2px;top:2px;width:20px;height:20px;background:#fff;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;transition:.3s;-webkit-transition:.3s;-moz-transition:.3s}
+.rectSwitchAreaOn{background:#1d8de4}
+.rectSwitchAreaOn .rect{left:22px}
+
+.checkArea{float:left;position:relative;width:auto;height:40px;cursor:pointer;margin-right:10px}
+.checkArea .check{float:left;width:20px;height:20px;margin-top:10px;background:url(../images/btn_check.png);background-size:contain}
+.checkArea .checkPress{background:url(../images/btn_check_pressed.png);background-size:contain}
+.checkArea p{float:left;height:40px;line-height:40px;color:#000;font-size:13px;margin-left:6px}
+
+.radioCheckArea{float:left;position:relative;width:auto;height:40px;cursor:pointer;margin-right:10px}
+.radioCheckArea .radioCheck{position:relative;float:left;width:24px;height:24px;margin-top:8px;border-radius:24px;-webkit-border-radius:24px;-moz-border-radius:24px;background:#ccc}
+.radioCheckArea .radioCircle{position:absolute;left:7px;top:7px;width:10px;height:10px;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;background:#fff}
+.radioCheckArea p{float:left;height:40px;line-height:40px;color:#000;font-size:13px;margin-left:6px}
+.radioCheckArea .radioCheckPress{background:#77cbbf}
+
+
+
+.tableUpdateArea{position:absolute;left:0;top:0;height:78px;background:#fff}
+.tableUpdateArea p{float:left;height:78px;line-height:78px;color:#000;font-size:14px;padding-left:30px;padding-right:10px}
+.tableUpdateArea .commonSelectArea{margin:19px 0 0 0}
+.tableUpdateArea button{float:left;width:130px;height:40px;margin:19px 0 0 6px}
+
+
+
+.fileUploadInput{display:none}
+
+.detailContentArea{position:relative;width:100%}
+.detailContentPartArea{position:relative;width:100%;background:#f0f0f0}
+.detailContentPartMargin{width:100%;height:10px;background:#fff;margin-top:24px}
+.detailContentPartArea .partTitle{width:100%;height:50px;line-height:50px;font-size:16px;color:#000;font-weight:bold;padding-left:40px;margin-top:10px}
+.detailContentPartArea .partRow{position:relative;width:100%;height:50px}
+.detailContentPartArea .partRow .label{position:absolute;left:40px;top:0;width:140px;height:50px;line-height:50px;font-size:14px;color:#000;font-weight:bold}
+.detailContentPartArea .partRow .label p{float:left;height:50px;line-height:50px;font-size:14px;color:#797979}
+.detailContentPartArea .partRow .label .redDot{float:left;width:4px;height:4px;background:#ff0000;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;margin-top:17px;margin-left:4px}
+.detailContentPartArea .partRow .disable{background:#ddd}
+
+.detailContentPartArea .partInput{position:absolute;left:190px;top:5px;width:312px;height:40px;border:1px solid #cccccc;font-size:14px;color:#000;padding-left:12px;padding-right:12px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+
+.detailContentPartArea .bigPartRow{height:100px}
+.detailContentPartArea .bigPartRow .partInput{position:absolute;left:190px;top:5px;width:312px;height:100px;border:1px solid #cccccc;font-size:14px;color:#000;padding:12px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.detailContentPartArea .partRightInput{left:510px}
+.detailContentPartArea .partUnit{position:absolute;left:450px;top:0;width:40px;height:50px;line-height:50px;text-align:right;color:#000;font-size:14px}
+.detailContentPartArea .partRightUnit{left:770px}
+.detailContentPartArea .profilePartRow{height:138px;margin-top:10px}
+.detailContentPartArea .profilePartRow .pictureArea{position:absolute;left:190px;width:640px;height:138px;overflow:hidden}
+.detailContentPartArea .profilePartRow .disable{background:transparent}
+.detailContentPartArea .profilePartRow .pictureArea .maxFileSizeText{position:absolute;left:0;top:114px;width:100%;height:20px;line-height:20px;font-size:12px;color:#1d8de4;text-align:left;font-weight:normal}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn{position:relative;float:left;width:104px;height:138px;margin-right:10px}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .picture{position:absolute;left:0;top:5px;width:104px;height:104px;object-fit:cover;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn p{position:absolute;left:0;top:114px;width:100%;height:20px;line-height:20px;font-size:12px;color:#1d8de4;text-align:center}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .deleteButton{display:none;position:absolute;right:4px;top:9px;width:20px;height:20px;object-fit:contain}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .deleteButton:hover{opacity:0.8}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .deleteButton:active{opacity:0.6}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .fileAddButton{position:absolute;left:0;top:5px;width:104px;height:104px;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background:#d8d8d8;cursor:pointer}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .fileAddButton img{position:absolute;left:42px;top:32px;width:20px;height:20px;object-fit:contain}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .fileAddButton h5{position:absolute;left:0;top:52px;width:100%;height:20px;line-height:20px;font-size:12px;font-weight:normal;color:#000;text-align:center}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .fileAddButton:hover h5{color:#1d8de4}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .fileAddButton:active h5{color:#444}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .disable{background:transparent}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .transparent{background:transparent}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .transparent h5{display:none}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .transparent img{display:none}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .picture{cursor:pointer}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .textColumn{display:table;position:absolute;left:0;top:5px;width:100%;height:104px;vertical-align:middle;cursor:pointer;background:transparent}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .textColumn h6{display:table-cell;width:100%;font-size:12px;color:#000;vertical-align:middle;text-align:center;font-weight:normal}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .textColumn:hover h6{color:#1d8de4;text-decoration:underline}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .maxFileSizeText{position:absolute;left:0;top:116px;width:100%;height:20px;line-height:20px;font-size:13px;color:#888;text-align:left}
+.detailContentPartArea .profilePartRow .pictureArea .pictureColumn .disable .maxFileSizeText{display:none}
+
+.detailContentPartArea .textRow{height:auto;min-height:100px}
+.detailContentPartArea .text{position:relative;width:470px;height:90px;border:1px solid #ccc;font-size:14px;color:#000;padding:12px;margin:5px 0 0 190px;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.detailContentPartArea .explainText{position:relative;width:470px;font-size:14px;color:#727272;margin:5px 0 0 190px;padding-bottom:10px}
+
+.detailContentBigPartArea .partInput{width:753px}
+.detailContentBigPartArea .text{width:753px;height:274px}
+
+.detailContentPartArea .commonSelectArea{position:absolute;left:190px;top:5px;width:312px;margin:0;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.detailContentPartArea .commonSelectArea img{position:absolute;right:10px;top:10px;width:20px;height:20px;object-fit:contain}
+.detailContentPartArea .activityTableArea{position:relative;width:100%;height:180px}
+.detailContentPartArea .activityTableArea table{position:absolute;left:0;top:0;width:380px;border-collapse:collapse}
+.detailContentPartArea .activityTableArea table tr{height:40px}
+.detailContentPartArea .activityTableArea table tr td{height:40px;border:1px solid #ccc}
+.detailContentPartArea .activityTableArea table tr td:first-child{width:150px;line-height:40px;background:#353c46;font-size:14px;color:#fff;padding-left:12px;padding-right:12px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
+.detailContentPartArea .activityTableArea table tr td:last-child{width:210px}
+.detailContentPartArea .activityTableArea table tr td:last-child p{height:40px;line-height:40px;text-align:right;font-size:14px;color:#000;padding-left:14px;padding-right:14px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
+.detailContentPartArea .activityTableArea table tr td:last-child .link{color:#0066ff;text-decoration:underline;cursor:pointer}
+.detailContentPartArea .activityTableArea table tr td:last-child .link:hover{opacity:0.8}
+.detailContentPartArea .activityTableArea table tr td:last-child .link:active{opacity:0.6}
+
+.detailContentPartArea .activityTableArea .activityTable0{left:40px}
+.detailContentPartArea .activityTableArea .activityTable1{left:440px}
+
+.detailContentPartArea .disable{color:#444;cursor:default}
+.detailContentPartArea .disable select{color:#444}
+
+
+.detailButton{position:absolute;top:22px;width:172px;height:56px;font-size:16px;color:#fff}
+
+.commentListArea{position:relative;width:100%}
+.commentListArea .commentRow{position:relative;width:760px;min-height:30px;overflow:hidden}
+.commentListArea .commentRow h6{float:left;width:120px;height:30px;padding:0;margin:0;font-size:14px;color:#000;font-weight:normal;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.commentListArea .commentRow h5{float:left;max-width:470px;min-height:30px;padding:0 24px 0 0;margin:0;font-size:16px;color:#000;font-weight:normal}
+.commentListArea .commentRow h6:first-child{margin-left:44px}
+.writeCommentArea{position:relative;width:100%;height:50px;margin-top:10px}
+.writeCommentArea .commentInput{position:absolute;left:40px;top:5px;width:580px;height:40px;border:1px solid #ccc;font-size:14px;color:#000}
+.writeCommentArea .commentButton{position:absolute;left:630px;top:5px;width:130px;height:40px;font-size:14px;color:#fff}
+
+
+
+.popupArea .popupRowArea{position:relative;width:100%}
+.popupArea .popupRow{position:relative;width:340px;height:40px;border:1px solid #ccc;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;overflow:hidden;margin-bottom:-1px}
+.popupArea .popupRow p{position:absolute;left:0;top:0;width:134px;height:40px;line-height:40px;color:#fff;background:#353c46;padding:0 12px 0 12px;font-size:14px}
+.popupArea .popupRow .popupRowContent{position:absolute;left:134px;width:206px;height:40px}
+.popupArea .popupRow .popupRowContent input{width:100%;height:40px;border:none;padding:0 12px 0 12px;text-align:right;font-size:14px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
+
+.popupArea .buttonArea{position:absolute;left:0;bottom:0;width:100%;height:64px}
+.popupArea .detailCancelButton{position:absolute;left:16px;top:12px;width:calc(50% - 22px);width:-webkit-calc(50% - 22px);width:-moz-calc(50% - 22px);height:40px}
+.popupArea .detailConfirmButton{position:absolute;right:16px;top:12px;width:calc(50% - 22px);width:-webkit-calc(50% - 22px);width:-moz-calc(50% - 22px);height:40px}

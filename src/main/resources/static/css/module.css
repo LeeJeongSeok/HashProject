@@ -1,0 +1,83 @@
+ @charset "utf-8";
+
+input::selection{background:#1d8de4}
+input::-moz-selection{background:#1d8de4}
+textarea::selection{background:#1d8de4}
+textarea::-moz-selection{background:#1d8de4}
+
+/*
+---------------
+-common
+---------------
+*/
+.commonImageButton{background-color:transparent;border:none;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}
+.commonImageButton:focus{outline:0px}
+
+html{position:relative;height:100%;overflow-x:hidden;overflow-y:auto}
+body{width:100%;height:100%;background:#fff;overflow-y:auto;overflow-x:hidden}
+
+input{border:1px solid #666;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:0 10px 0 10px}
+
+.fileUploadInput{display:none}
+
+.greenButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#506864;color:#fff;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.greenButton:hover{background:#614c3f;color:#fff}
+.greenButton:active{background:#000;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+.orangeButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#fcae1a;color:#fff;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.orangeButton:hover{background:#3a4e1b;color:#fff}
+.orangeButton:active{background:#a86d02;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+
+.purpleButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#506864;color:#fff;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.purpleButton:hover{background:#614c3f}
+.purpleButton:active{background:#000;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+.grayButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#ccc;color:#444;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.grayButton:hover{background:#614c3f;color:#fff}
+.grayButton:active{background:#000;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+.blackButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#000;color:#fff;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.blackButton:hover{background:#f71961}
+.blackButton:active{background:#999;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+
+.whiteButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#fff;color:#000;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.whiteButton:hover{background:#444;color:#fff}
+.whiteButton:active{background:#000;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+
+.darkGrayButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#ccc;color:#444;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.darkGrayButton:hover{background:#999;color:#fff}
+.darkGrayButton:active{background:#666;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+
+
+.blueButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#00486a;color:#fff;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.blueButton:hover{background:#0095dd}
+.blueButton:active{background:#0076ae;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+
+.redButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#ff0000;color:#fff;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.redButton:hover{background:#880000}
+.redButton:active{background:#660000;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+
+.pinkButton{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-size:14px;background:#ff3371;color:#fff;font-size:14px;border:none;transition:background-color 1s;-webkit-transition:background-color 1s;-moz-transition:background-color 1s}
+.pinkButton:hover{background:#e60045}
+.pinkButton:active{background:#9d002f;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}
+
+.entireArea{position:absolute;left:0;top:0;width:100%;height:100vh}
+.disableButton{background:#ddd;border:none;color:#000;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0}
+.disableButton:hover{background:#ddd}
+.disableButton:active{background:#ddd}
+
+.hiddenInput{display:none}
+
+.circleCheck{width:20px;height:20px;background:url(../images/ico_check_circle_off.png);background-size:contain}
+.circleCheckPress{background:url(../images/ico_check_circle_on.png);background-size:contain}
+
+
+.check{width:20px;height:20px;background:url(../images/ico_check.png);background-size:contain}
+.checkPress{background:url(../images/ico_check_pressed.png);background-size:contain}
+
+.checkArea{position:relative;height:40px;padding-left:10px;cursor:pointer}
+.checkArea .check{float:left;margin-top:10px}
+.checkArea p{float:left;height:40px;line-height:40px;padding-left:8px;font-size:14px;color:#000}
+
+.commonSelectArea{position:relative;width:140px;height:40px;overflow:hidden;background:#fff;padding:0;border:1px solid #ccc;margin:0;cursor:pointer;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
+.commonSelectArea:hover{border-color:#000}
+.commonSelectArea select{position:absolute;float:left;padding:0;width:100%;height:100%;padding-left:10px;font-size:14px;color:#000;cursor:pointer}
+.commonSelectArea select:focus{outline:0}
+.commonSelectArea img{position:absolute;right:8px;top:17px;width:10px;height:5px;object-fit:contain}

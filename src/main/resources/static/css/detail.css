@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+.homeArea{position:relative;width:100%;padding-top:60px;overflow:hidden}
+.homeItem{position:relative;width:calc((100% - 60px)/4);width:-webkit-calc((100% - 60px)/4);width:-moz-calc((100% - 60px)/4);height:450px;float:left;background:#fff;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;margin-top:20px;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;border:1px solid #ccc;margin-right:20px;overflow:hidden}
+.homeItem:nth-child(4n){margin-right:0}
+.homeItem .picture{position:absolute;left:0;top:0;width:100%;height:200px;object-fit:cover;cursor:pointer}
+.homeItem .userRow{position:absolute;left:0;top:210px;width:100%;height:40px}
+.homeItem .userRow .userPicture{position:absolute;left:10px;top:0;width:40px;height:40px;border-radius:40px;-webkit-border-radius:40px;-moz-border-radius:40px;overflow:hidden}
+.homeItem .userRow .userPicture img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain}
+.homeItem .userRow .userPictureEmpty{background:#eee}
+.homeItem .userRow .userName{position:absolute;left:0;top:0;width:100%;height:40px;line-height:40px;font-size:14px;color:#000;padding-left:60px}
+.homeItem .userRow .deleteStyleButton{position:absolute;right:5px;top:0;width:40px;height:40px;object-fit:contain;cursor:pointer}
+.homeItem .userRow .deleteStyleButton:hover{opacity:0.8}
+.homeItem .userRow .deleteStyleButton:active{opacity:0.6}
+.homeItem .contentRow{position:absolute;left:0;top:260px;width:100%;height:150px;overflow:hidden;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.homeItem .contentMiniRow{float:left;position:relative;width:50%;height:50px;overflow:hidden}
+.homeItem .contentMiniRow img{position:absolute;left:10px;top:10px;width:30px;height:30px;object-fit:cover;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.homeItem .contentMiniRow p{position:absolute;left:0;top:0;width:100%;height:50px;line-height:50px;font-size:12px;color:#000;padding-left:60px}
+.homeItem .writeTime{position:absolute;left:0;bottom:0;width:100%;height:36px;line-height:36px;color:#000;text-align:right;padding-right:10px;font-size:12px}
+.homeItem .heart{position:absolute;left:8px;bottom:8px;width:20px;height:20px;object-fit:contain;cursor:pointer}
+.homeItem .heartCount{cursor:pointer;position:absolute;left:0;bottom:8px;height:20px;line-height:20px;color:#000;font-size:12px;padding-left:36px;padding-right:20px}
+
+.detailPopupArea{width:1000px;height:800px;left:calc(50% - 500px);left:-webkit-calc(50% - 500px);left:-moz-calc(50% - 500px);top:calc(50% - 400px);top:-webkit-calc(50% - 400px);top:-moz-calc(50% - 400px);overflow:hidden}
+.detailPopupArea .fotoramaBackground{position:absolute;left:0;top:0;width:650px;height:800px}
+.detailPopupArea .fotoramaBackground .fotorama{width:100%;height:100%}
+.detailPopupArea .rightArea{position:absolute;right:0;top:50px;width:340px;height:730px}
+.detailPopupArea .rightArea .rowTitle{width:100%;height:30px;line-height:30px;color:#666;font-size:14px;font-weight:bold;margin-top:10px}
+.detailPopupArea .rightArea .contentRow{position:relative;width:calc(100% - 10px);width:-webkit-calc(100% - 10px);width:-moz-calc(100% - 10px);height:150px;overflow:hidden;border:1px solid #ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.detailPopupArea .rightArea .contentMiniRow{float:left;position:relative;width:50%;height:50px;overflow:hidden}
+.detailPopupArea .rightArea .contentMiniRow img{position:absolute;left:10px;top:10px;width:30px;height:30px;object-fit:cover;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.detailPopupArea .rightArea .contentMiniRow p{position:absolute;left:0;top:0;width:100%;height:50px;line-height:50px;font-size:12px;color:#000;padding-left:60px}
+.detailPopupArea .rightArea .userArea{position:relative;width:calc(100% - 10px);width:-webkit-calc(100% - 10px);width:-moz-calc(100% - 10px);height:200px;background:#fff;margin-top:10px;border:1px solid #ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.detailPopupArea .rightArea .userArea .userRow{position:relative;width:100%;height:50px;margin-top:10px}
+.detailPopupArea .rightArea .userArea .userRow .userPicture{position:absolute;left:10px;top:0;width:40px;height:40px;border-radius:40px;-webkit-border-radius:40px;-moz-border-radius:40px;overflow:hidden}
+.detailPopupArea .rightArea .userArea .userRow .userPicture img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain}
+.detailPopupArea .rightArea .userArea .userRow .userPictureEmpty{background:#eee}
+.detailPopupArea .rightArea .userArea .userRow .userName{position:absolute;left:0;top:0;width:100%;height:40px;line-height:40px;font-size:14px;color:#000;padding-left:60px}
+
+.detailPopupArea .rightArea .userArea textarea{position:absolute;left:0;top:40px;width:100%;height:150px;background:#fff;border:none;padding:10px;font-size:14px}
+.detailPopupArea .rightArea .replyArea{position:relative;width:calc(100% - 10px);width:-webkit-calc(100% - 10px);width:-moz-calc(100% - 10px);height:260px;background:#fff;border:1px solid #ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;overflow-y:scroll;overflow-x:hidden;scrollbar-color:#000 #eee;scrollbar-width:thin;scrollbar-height:thin}
+.detailPopupArea .rightArea .replyArea::-webkit-scrollbar{width:8px}
+.detailPopupArea .rightArea .replyArea::-webkit-scrollbar-track{-webkit-box-shadow:none}
+.detailPopupArea .rightArea .replyArea::-webkit-scrollbar-thumb{background-color:#000;outline:none}
+.detailPopupArea .rightArea .replyArea::-webkit-scrollbar-track-piece{background-color:#eee}
+.detailPopupArea .rightArea .replyArea::-webkit-scrollbar-thumb:vertical{width:8px;background-color:#000}
+.detailPopupArea .rightArea .replyRow{position:relative;width:100%}
+.detailPopupArea .rightArea .replyRow .content{width:100%;font-size:14px;color:#000;padding:6px 30px 6px 40px;line-height:20px}
+.detailPopupArea .rightArea .replyRow .content span{font-weight:bold;margin-right:6px}
+.detailPopupArea .rightArea .replyRow .picture{position:absolute;left:5px;top:5px;width:30px;height:30px;object-fit:cover;background:#eee;border-radius:30px;-webkit-border-radius:border-radius:30px}
+.detailPopupArea .rightArea .replyRow h6{width:100%;font-size:12px;color:#666;padding:0 6px 0 40px;font-weight:normal}
+.detailPopupArea .rightArea .replyRow .deleteReplyButton{position:absolute;right:5px;top:10px;width:20px;height:20px;object-fit:contain;cursor:pointer}
+.detailPopupArea .rightArea .replyRow .deleteReplyButton:hover{opacity:0.8}
+.detailPopupArea .rightArea .replyRow .deleteReplyButton:active{opacity:0.6}
+.detailPopupArea .rightArea .replyRow .deleteReplyButtonOtherPeople{display:none}
+.detailPopupArea .rightArea .writeReplayArea{position:relative;width:calc(100% - 10px);width:-webkit-calc(100% - 10px);width:-moz-calc(100% - 10px);height:40px;margin-top:10px}
+.detailPopupArea .rightArea .writeReplayArea input{position:absolute;left:0;top:0;width:100%;height:40px;padding-right:44px;border:1px solid #ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;font-size:14px}
+.detailPopupArea .rightArea .writeReplayArea input:focus{border-color:#000}
+.detailPopupArea .rightArea .writeReplayArea img{position:absolute;right:0;top:0;width:40px;height:40px;object-fit:contain;cursor:pointer}
+.detailPopupArea .heartArea{position:absolute;right:0;top:10px;width:340px;height:30px}
+.detailPopupArea .heartArea img{position:absolute;left:0;top:0;width:30px;height:30px;object-fit:contain;cursor:pointer}
+.detailPopupArea .heartArea p{cursor:pointer;position:absolute;left:0;top:0;height:30px;line-height:30px;color:#000;font-size:12px;padding-left:40px;padding-right:20px}

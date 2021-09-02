@@ -1,0 +1,52 @@
+@charset 'utf-8';
+
+.loginPopup{width:360px;height:360px;left:calc(50% - 180px);left:-webkit-calc(50% - 180px);left:-moz-calc(50% - 180px);top:calc(50% - 200px);top:-webkit-calc(50% - 200px);top:-moz-calc(50% - 200px)}
+.loginPopup h1{position:absolute;left:0;top:30px;width:100%;height:50px;line-height:50px;font-size:40px;font-weight:normal;color:#000;text-align:center}
+.loginPopup .loginIdInput{position:absolute;top:100px;left:40px;width:calc(100% - 80px);width:-webkit-calc(100% - 80px);width:-moz-calc(100% - 80px);height:40px;background:#fff;font-size:14px;color:#000;padding:0 10px 0 10px;border:1px solid #ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.loginPopup .loginIdInput:focus{border-color:#000}
+.loginPopup .loginPasswordInput{position:absolute;top:160px;left:40px;width:calc(100% - 80px);width:-webkit-calc(100% - 80px);width:-moz-calc(100% - 80px);height:40px;background:#fff;font-size:14px;color:#000;padding:0 10px 0 10px;border:1px solid #ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.loginPopup .loginPasswordInput:focus{border-color:#000}
+.loginPopup .loginButton{position:absolute;top:230px;left:40px;width:calc(100% - 80px);width:-webkit-calc(100% - 80px);width:-moz-calc(100% - 80px);height:40px;color:#fff;font-size:16px;font-weight:bold;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.loginPopup h6{position:absolute;right:40px;top:280px;width:100px;height:40px;line-height:40px;color:#000;font-size:12px;font-weight:normal;text-decoration:underline;cursor:pointer;text-align:right}
+.loginPopup h6:hover{opacity:0.8}
+.loginPopup h6:active{opacity:0.6}
+.loginPopup .joinText{position:absolute;left:0;bottom:20px;width:100%;height:40px;line-height:40px;text-align:right;font-size:12px;color:#000;padding-right:40px;cursor:pointer;text-decoration:underline;text-underline-position:under}
+.loginPopup .joinText:hover{opacity:0.8}
+.loginPopup .joinText:active{opacity:0.6}
+
+
+.joinPopup{width:800px;height:600px;left:calc(50% - 400px);left:-webkit-calc(50% - 400px);left:-moz-calc(50% - 400px);top:calc(50% - 300px);top:-webkit-calc(50% - 300px);top:-moz-calc(50% - 300px)}
+.joinPopup h1{position:absolute;left:0;top:20px;width:100%;height:50px;line-height:50px;font-size:24px;font-weight:normal;color:#000;text-align:center}
+.joinPopup .joinRowArea{position:absolute;top:110px}
+.joinPopup .joinRowLeftArea{left:30px;width:300px}
+.joinPopup .joinRowRightArea{right:10px;width:400px}
+
+.joinPopup .joinRow{position:relative;width:100%;height:40px;overflow:hidden;margin-bottom:10px}
+.joinPopup .joinRow .label{position:absolute;left:0;top:0;width:120px;height:40px;line-height:40px;padding-left:20px;font-size:14px;color:#000;font-weight:bold}
+.joinPopup .joinRow .star{position:absolute;left:0;top:0;width:20px;height:40px;line-height:40px;text-align:center}
+.joinPopup .joinRow .joinInput{position:absolute;left:140px;top:0;height:40px;background:#fff;font-size:14px;color:#000;padding:0 10px 0 10px;border:1px solid #ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.joinPopup .joinRow .joinInput:focus{border-color:#000}
+.joinPopup .joinRow .fullInput{width:calc(100% - 160px);width:-webkit-calc(100% - 160px);width:-moz-calc(100% - 160px)}
+.joinPopup .joinRow .halfInput{width:100px}
+.joinPopup .joinRow .unit{position:absolute;left:210px;top:0;height:40px;line-height:40px;font-size:12px}
+.joinPopup .joinRow .checkBackgroundArea{position:absolute;left:140px;top:0;width:calc(100% - 160px);width:-webkit-calc(100% - 160px);width:-moz-calc(100% - 160px)}
+.joinPopup .joinRow .checkArea{float:left;padding-left:0;padding-right:20px}
+.joinPopup .dummyRow{width:100%;height:20px}
+
+.joinPopup .pictureRow{position:relative;width:100%;height:100px}
+.joinPopup .pictureRow .pictureBox{position:absolute;left:calc(50% - 45px);left:-webkit-calc(50% - 45px);left:-moz-calc(50% - 45px);top:0;width:90px;height:90px;border-radius:70px;-webkit-border-radius:70px;-moz-border-radius:70px;background:#eee;overflow:hidden}
+.joinPopup .pictureRow .pictureBox .picture{position:absolute;left:0;top:0;width:90px;height:90px;object-fit:cover;border:none;outline:0}
+.joinPopup .pictureRow .joinPictureCameraButton{cursor:pointer;position:absolute;left:calc(50% + 15px);left:-webkit-calc(50% + 15px);left:-moz-calc(50% + 15px);top:65px;width:30px;height:30px;object-fit:contain}
+.joinPopup .pictureRow .joinPictureCameraButton:hover{opacity:0.8}
+.joinPopup .pictureRow .joinPictureCameraButton:active{opacity:0.6}
+
+.joinPopup .rowLabel{width:100%;height:40px;line-height:40px;font-size:14px;color:#000;font-weight:bold;margin-top:20px}
+.joinPopup .joinBigRow{height:100px}
+.joinPopup .joinBigRow textarea{position:absolute;left:0;top:0;width:100%;height:100px;font-size:14px;color:#000;padding:10px;border:1px solid #ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.joinPopup .joinBigRow textarea:focus{border-color:#000}
+.joinPopup .joinInstaRow{position:relative;width:100%;height:40px}
+.joinPopup .joinInstaRow input{position:absolute;left:0;top:0;width:100%;height:40px;background:#fff;font-size:14px;color:#000;padding:0 10px 0 10px;border:1px solid #ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+
+.joinPopup .joinPopupButton{position:absolute;bottom:20px;width:200px;height:40px}
+.joinPopup .joinCancelButton{left:calc(50% - 210px);left:-webkit-calc(50% - 210px);left:-moz-calc(50% - 210px)}
+.joinPopup .joinConfirmButton{left:calc(50% + 10px);left:-webkit-calc(50% + 10px);left:-moz-calc(50% + 10px)}

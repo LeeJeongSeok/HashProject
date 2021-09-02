@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+.bodyArea{position:relative;min-width:1200px;overflow:auto}
+.entireArea{position:relative;width:100%;background:#f5f5f5}
+.dummyTop{width:100%;height:64px}
+.centerArea{position:relative;width:1080px;margin-left:calc(50% - 540px);margin-left:-webkit-calc(50% - 540px);margin-left:-moz-calc(50% - 540px)}
+
+.navigationArea{position:fixed;left:0;top:0;width:100%;height:130px;border-bottom:1px solid #eee;background:#fff}
+.navigationCenterArea{position:absolute;left:calc(50% - 540px);left:-webkit-calc(50% - 540px);left:-moz-calc(50% - 540px);top:0;width:1080px;height:130px;background:#fff}
+
+.navigationSearchArea{position:absolute;left:0;top:0;width:100%;height:60px}
+.navigationSearchArea .loginButton{position:absolute;right:10px;top:10px;width:130px;height:40px;padding-left:20px;padding-right:20px;border-radius:40px;-webkit-border-radius:40px;-moz-border-radius:40px;font-size:14px;font-weight:bold}
+.navigationSearchArea .topSearchInputArea{position:absolute;left:calc(50% - 130px);left:-webkit-calc(50% - 130px);left:-moz-calc(50% - 130px);top:0;width:260px;height:60px;background:#fff}
+.navigationSearchArea .topSearchInputArea input{position:absolute;left:0;top:10px;width:100%;height:40px;border:none;background:#eee;font-size:14px;border-radius:40px;-webkit-border-radius:40px;-moz-border-radius:40px;padding-left:20px;padding-right:60px}
+.navigationSearchArea .topSearchInputArea input:focus{background:#fdb7cd}
+.navigationSearchArea .topSearchInputArea .topSearchButton{position:absolute;right:6px;top:10px;width:40px;height:40px;object-fit:contain;cursor:pointer}
+.navigationSearchArea .topSearchInputArea .topSearchButton:hover{opacity:0.8}
+.navigationSearchArea .topSearchInputArea .topSearchButton:active{opacity:0.6}
+.navigationSearchArea .myProfileButton{cursor:pointer;position:absolute;right:10px;top:10px;width:40px;height:40px;background:#eee;border-radius:40px;-webkit-border-radius:40px;-moz-border-radius:40px;overflow:hidden}
+.navigationSearchArea .myProfileButton img{position:absolute;left:0;top:0;width:40px;height:40px;object-fit:contain}
+.navigationSearchArea .myProfileButton:hover{opacity:0.8}
+.navigationSearchArea .myProfileButton:active{opacity:0.6}
+.navigationTopLogo{position:absolute;left:0;top:0;width:60px;height:60px;color:#000;font-size:40px;cursor:pointer;line-height:60px;text-align:center;font-weight:bold}
+.navigationTopLogo:hover{opacity:0.8}
+.navigationTopLogo:active{opacity:0.6}
+
+.navigationItemArea{position:absolute;left:10px;top:70px;width:calc(100% - 20px);width:-webkit-calc(100% - 20px);width:-moz-calc(100% - 20px);height:60px}
+.navigationItem{position:relative;width:calc(100% / 6);width:-webkit-calc(100% / 6);width:-moz-calc(100% / 6);height:60px;line-height:60px;float:left;text-align:center;color:#000;text-decoration:none;font-weight:bold;font-size:16px;cursor:pointer;font-family:"DetailFontBold"}
+.navigationItem:hover{opacity:0.8}
+.navigationItem:active{opacity:0.6}
+
+.navigationLine{position:absolute;left:0;top:54px;width:calc((100% / 6) - 60px);width:-webkit-calc((100% / 6) - 60px);width:-moz-calc((100% / 6) - 60px);height:4px;margin-left:30px;background:#000}
+.navigationLine_top{left:0}
+.navigationLine_bottom{left:calc(100% / 6);left:-webkit-calc(100% / 6);left:-moz-calc(100% / 6)}
+.navigationLine_acc{left:calc(100% / 3);left:-webkit-calc(100% / 3);left:-moz-calc(100% / 3)}
+.navigationLine_hat{left:50%}
+.navigationLine_shoes{left:calc(50% + (100% / 6));left:-webkit-calc(50% + (100% / 6));left:-moz-calc(50% + (100% / 6))}
+.navigationLine_bag{left:calc(50% + (100% / 3));left:-webkit-calc(50% + (100% / 3));left:-moz-calc(50% + (100% / 3))}
+
+.navigationForDetail{height:60px}
+.navigationForDetail .navigationLine{display:none}
+.navigationForDetail .navigationItemArea{display:none}
+.navigationForDetail .navigationCenterArea{height:60px}
+
+.emptyTouchArea{z-index:4;display:none;position:fixed;left:0;top:0;width:100%;height:100vh;background:transparent}
+.profileArea{position:absolute;left:calc(50% + 400px);left:-webkit-calc(50% + 400px);left:-moz-calc(50% + 400px);top:50px;width:160px;height:0;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;box-shadow:1px 1px 4px #000;-webkit-box-shadow:1px 1px 4px #000;-moz-box-shadow:1px 1px 4px #000;background:#fff;overflow:hidden;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;transition:height 0.2s;-webkit-transition:height 0.2s;-moz-transition:height 0.2s}
+.profileArea p{width:100%;height:40px;line-height:40px;font-size:14px;color:#000;background:#fff;padding-left:20px;cursor:pointer}
+.profileArea p:hover{background:#eee}
+.profileArea p:active{background:#aaa}
+
+.addStyleButton{position:fixed;left:calc(50% + 440px);left:-webkit-calc(50% + 440px);left:-moz-calc(50% + 440px);bottom:20px;width:60px;height:60px;object-fit:contain;cursor:pointer}
+.addStyleButton:hover{opacity:0.8}
+.addStyleButton:active{opacity:0.6}
+
+.addStylePopupArea{width:1000px;height:800px;left:calc(50% - 500px);left:-webkit-calc(50% - 500px);left:-moz-calc(50% - 500px);top:calc(50% - 400px);top:-webkit-calc(50% - 400px);top:-moz-calc(50% - 400px)}
+.addStylePopupArea .addStylePopupButton{position:absolute;bottom:20px;width:200px;height:40px}
+.addStylePopupArea .addStylePopupCancelButton{left:calc(50% - 210px);left:-webkit-calc(50% - 210px);left:-moz-calc(50% - 210px)}
+.addStylePopupArea .addStylePopupConfirmButton{left:calc(50% + 10px);left:-webkit-calc(50% + 10px);left:-moz-calc(50% + 10px)}
+
+.addStylePopupArea .styleMainArea{position:absolute;left:calc(50% - 230px);left:-webkit-calc(50% - 230px);left:-moz-calc(50% - 230px);top:40px;width:460px;height:240px}
+.addStylePopupArea .styleMainArea h1{position:absolute;left:0;top:0;width:100%;height:40px;line-height:40px;font-size:18px;font-weight:bold;color:#000}
+.addStylePopupArea .styleMainArea .styleMainPictureArea{position:absolute;left:0;top:40px;width:100%;height:80px}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem{position:relative;width:80px;height:80px;float:left;margin-right:10px;background:#fff;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;overflow:hidden}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem .pictureMainAddItem{position:absolute;left:0;top:0;width:100%;height:80px;line-height:80px;font-size:40px;color:#000;text-align:center;cursor:pointer;background:#eee;overflow:hidden}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem .pictureMainAddItem:hover{background:#ccc}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem .pictureMainAddItem:active{background:#999}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem .styleMainPicture{position:absolute;left:0;top:0;width:100%;height:80px;object-fit:cover;display:none}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem .styleMainPicture:hover{opacity:0.8}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem .styleMainPicture:active{opacity:0.6}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem .styleMainPictureDeleteButton{position:absolute;right:4px;top:4px;width:24px;height:24px;object-fit:contain;cursor:pointer;display:none}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem .styleMainPictureDeleteButton:hover{opacity:0.8}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItem .styleMainPictureDeleteButton:active{opacity:0.6}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItemExist .pictureMainAddItem{display:none}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItemExist .styleMainPicture{display:block}
+.addStylePopupArea .styleMainArea .styleMainPictureArea .pictureMainItemExist .styleMainPictureDeleteButton{display:block}
+.addStylePopupArea .styleMainArea textarea{position:absolute;left:0;top:130px;width:100%;height:80px;border:1px solid #ccc;padding:10px;font-size:14px}
+.addStylePopupArea .styleMainArea textarea:focus{border-color:#000}
+
+.addStylePopupArea .styleSubArea{position:absolute;left:20px;top:280px;width:calc(100% - 40px);width:-webkit-calc(100% - 40px);width:-moz-calc(100% - 40px);height:480px}
+.addStylePopupArea .styleSubArea .styleSubItem{float:left;position:relative;width:calc((100% - 20px)/3);width:-webkit-calc((100% - 20px)/3);width:-moz-calc((100% - 20px)/3);height:200px;border:1px solid #000;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;margin:10px 10px 0 0}
+.addStylePopupArea .styleSubArea .styleSubItem:nth-child(3n){margin-right:0}
+.addStylePopupArea .styleSubArea .styleSubItem h1{position:absolute;left:0;top:10px;width:100%;height:40px;line-height:40px;font-size:18px;font-weight:bold;color:#000;text-align:center}
+.addStylePopupArea .styleSubArea .pictureSubItem{position:absolute;left:10px;top:60px;width:80px;height:80px;float:left;margin-right:10px;background:#fff;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;overflow:hidden}
+.addStylePopupArea .styleSubArea .pictureSubItem .pictureSubAddItem{position:absolute;left:0;top:0;width:100%;height:80px;line-height:80px;font-size:40px;color:#000;text-align:center;cursor:pointer;background:#eee}
+.addStylePopupArea .styleSubArea .pictureSubItem .pictureSubAddItem:hover{background:#ccc}
+.addStylePopupArea .styleSubArea .pictureSubItem .pictureSubAddItem:active{background:#999}
+.addStylePopupArea .styleSubArea .pictureSubItem .styleSubPicture{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;display:none}
+.addStylePopupArea .styleSubArea .pictureSubItem .styleSubPicture:hover{opacity:0.8}
+.addStylePopupArea .styleSubArea .pictureSubItem .styleSubPicture:active{opacity:0.6}
+.addStylePopupArea .styleSubArea .subContentArea{position:absolute;left:100px;top:60px;width:calc(100% - 110px);width:-webkit-calc(100% - 110px);width:-moz-calc(100% - 110px);height:130px}
+.addStylePopupArea .styleSubArea .commonSelectArea{position:absolute;left:0;top:0;width:100%;height:30px}
+.addStylePopupArea .styleSubArea .commonSelectArea img{top:12px}
+.addStylePopupArea .styleSubArea input{position:absolute;left:0;top:36px;width:100%;height:30px;font-size:14px;color:#000;border:1px solid #ccc}
+.addStylePopupArea .styleSubArea input:focus{border-color:#000}
+.addStylePopupArea .styleSubArea textarea{position:absolute;left:0;top:72px;width:100%;height:56px;font-size:14px;color:#000;border:1px solid #ccc;padding:10px}
+.addStylePopupArea .styleSubArea textarea:focus{border-color:#000}
+.addStylePopupArea .styleSubArea .styleSubCircleCheck{position:absolute;left:10px;top:15px;width:30px;height:30px;cursor:pointer}
+
+
+
+.detailTitle{position:absolute;left:100px;top:0;width:calc(100% - 200px);width:-webkit-calc(100% - 200px);width:-moz-calc(100% - 200px);height:60px;line-height:60px;color:#000;font-size:18px;text-align:center}
