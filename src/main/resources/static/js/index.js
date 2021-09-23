@@ -42,7 +42,7 @@ $("#myInformationButton").click(function() {
 	});
 });
 $("#myStyleDetailRoomButton").click(function() {
-	location.replace("index.jsp?page=detail");
+	location.replace("/index?page=detail");
 });
 
 $("#logoutButton").click(function() {
