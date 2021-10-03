@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
@@ -44,11 +45,16 @@ public class ReplyController {
 
     @PostMapping("/deleteReply")
     @ResponseBody
-    public String deleteReply(@RequestBody ReplyItem replyItem, HttpSession session) {
+    public String deleteReply(@RequestBody String info, HttpSession session) {
+
+        // 기존에 ReplyItem 객체로 받아서 넘길려고했는데 부족했음.
+        // 현재는 String 형태로 json 형식의 데이터를 받은 후 JSONObject으로 변환하여 사용중
+
+        JSONObject replyItem = new JSONObject(info);
 
         int userNo = StringUtil.getStringNumber((String)session.getAttribute("no"));
 
-        int replyNo = StringUtil.getStringNumber(replyItem.getJSONObject().getString("no"));
+        int replyNo = (int) replyItem.get("replyNo");
         JSONObject jsonObject = AppInformationManager.getInstance().deleteReply(userNo, replyNo);
 
         return jsonObject.toString();
