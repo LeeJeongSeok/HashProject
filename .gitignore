@@ -25,6 +25,7 @@ target/
 /.project
 /.idea
 web-application-server.iml
+src/main/resources/application.properties
 
 ### NetBeans ###
 /nbproject/private/
