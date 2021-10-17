@@ -76,7 +76,12 @@
             <version>8.0.25</version>
         </dependency>
 
-
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-aws -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-aws-context</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>
 
     </dependencies>
 
