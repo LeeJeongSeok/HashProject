@@ -11,7 +11,6 @@ public class IndexController {
     @GetMapping("/index")
     public String index(HttpServletRequest request) {
         String categoryName = request.getParameter("categoryName");
-        System.out.println("categoryName : " + categoryName);
         return "index";
     }
 }

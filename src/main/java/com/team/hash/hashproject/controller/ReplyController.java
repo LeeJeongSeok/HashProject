@@ -1,14 +1,12 @@
 package com.team.hash.hashproject.controller;
 
 import com.team.hash.hashproject.api.AppInformationManager;
-import com.team.hash.hashproject.domain.ReplyItem;
 import com.team.hash.hashproject.domain.StyleItem;
 import com.team.hash.hashproject.util.StringUtil;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;

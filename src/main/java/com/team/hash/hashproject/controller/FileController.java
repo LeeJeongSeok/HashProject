@@ -26,7 +26,6 @@ public class FileController {
         boolean isConfirm = false;
         String fileName = "";
         String resultPath = s3Uploader.upload(file, "static");
-        System.out.println("S3 Image Path : " + resultPath);
 
         isConfirm = true;
 

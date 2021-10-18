@@ -80,15 +80,11 @@ public class StyleController {
     @ResponseBody
     public String deleteStyle(@RequestBody String styleItem, HttpSession session) {
 
-        // deleteReply와 마찬가지인 문제
-
-        System.out.println("styleItem : " + styleItem);
         JSONObject style = new JSONObject(styleItem);
 
         int userNo = StringUtil.getStringNumber((String)session.getAttribute("no"));
-
-//        int styleNo = StringUtil.getStringNumber(Integer.toString(styleItem.getNo()));
         int styleNo = (int) style.get("styleNo");
+
         JSONObject jsonObject = AppInformationManager.getInstance().deleteStyle(userNo, styleNo);
 
         return jsonObject.toString();

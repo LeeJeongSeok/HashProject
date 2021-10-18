@@ -3,15 +3,12 @@ package com.team.hash.hashproject.controller;
 import com.team.hash.hashproject.api.AppInformationManager;
 import com.team.hash.hashproject.domain.User;
 import com.team.hash.hashproject.util.AesUtil;
-import com.team.hash.hashproject.util.HttpSessionUtils;
 import com.team.hash.hashproject.util.StringUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Map;
 
@@ -27,9 +24,6 @@ public class UserController {
         String password = new AesUtil().encrypt(tempPassword);
         JSONObject jsonObject = AppInformationManager.getInstance().login(email, password);
 
-        System.out.println("controller : " + email);
-        System.out.println("controller : " + tempPassword);
-
         boolean isConfirm = false;
         int no = 0;
         String name = "";
@@ -44,8 +38,6 @@ public class UserController {
             session.setAttribute("email", email);
             session.setAttribute("name", name);
         }
-
-        System.out.println(jsonObject.toString());
 
         return jsonObject.toString();
     }
@@ -68,8 +60,6 @@ public class UserController {
         String instagramId = StringUtil.replaceNullForServlet(user.getInstargramId());
 
 
-        System.out.println("Join User info : " + user.toString());
-
         JSONObject jsonObject = AppInformationManager.getInstance().join(email, password, name, sex, height, weight, pictureUrl, description, strTagArray, instagramId);
 
         return jsonObject.toString();
@@ -80,8 +70,6 @@ public class UserController {
     public String updateUser(@RequestBody User user, HttpSession session) {
 
         int userNo = StringUtil.getStringNumber((String)session.getAttribute("no"));
-
-        System.out.println("userNo from session : " + userNo);
 
         String email = StringUtil.replaceNullForServlet(user.getEmail());
         String tempPassword = StringUtil.replaceNullForServlet(user.getPassword());
