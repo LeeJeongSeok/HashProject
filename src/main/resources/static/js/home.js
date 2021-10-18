@@ -185,7 +185,7 @@ function showDetailPopup(item) {
 		var _displayProductPictureUrl = "";
 		var _productPictureUrl = _productObject.pictureUrl;
 		if(String(_productPictureUrl).length > 0) {
-			_displayProductPictureUrl = "file/"+_productPictureUrl;
+			_displayProductPictureUrl = _productPictureUrl;
 		}
 		
 		var _isUse = _productObject.isUse;
@@ -198,7 +198,7 @@ function showDetailPopup(item) {
 	var _displayUserPictureUrl = "";
 	var _rowUserPictureUrl = item.userPictureUrl;
 	if(String(_rowUserPictureUrl).length > 0) {
-		_displayUserPictureUrl = "file/"+_rowUserPictureUrl;
+		_displayUserPictureUrl = _rowUserPictureUrl;
 	} else {
 		_displayUserPictureUrl = "images/ico_person.png";
 	}
@@ -226,7 +226,7 @@ function showDetailPopup(item) {
 		var data = [];
 		for(var i=0; i<size; i++) {
 			var rowPictureUrl = pictureUrlArray[i].pictureUrl;
-			data.push({img: "file/"+rowPictureUrl});
+			data.push({img: rowPictureUrl});
 		}
 
 		var fotorama = $('#fotorama');
@@ -323,7 +323,7 @@ function drawReplyArray() {
 		var content = item.content;
 		var userPictureUrl = item.userPictureUrl;
 		if(String(userPictureUrl).length > 0) {
-			var temp = "file/"+userPictureUrl;
+			var temp = userPictureUrl;
 			userPictureUrl = temp;
 		}
 		

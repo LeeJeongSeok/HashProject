@@ -46,7 +46,7 @@ function showMyInformationPopup(item) {
 	
 	var pictureUrl = item.pictureUrl;
 	if(String(pictureUrl).length > 0) {
-		$("#joinPicture").attr("src", "file/"+pictureUrl);
+		$("#joinPicture").attr("src", pictureUrl);
 	} else {
 		$("#joinPicture").attr("src", "images/ico_person.png");
 	}
@@ -319,7 +319,7 @@ function uploadFileForJoin(input) {
 					var fileName = data.fileName;
 					
 					$("#fileUrlInputForJoin").val(fileUrl);
-					$("#joinPicture").attr("src", "file/"+fileUrl);
+					$("#joinPicture").attr("src", fileUrl);
 				} else {
 					showAlert("파일 업로드에 실패했습니다.", null);
 				}

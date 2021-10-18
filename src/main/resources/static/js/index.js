@@ -221,13 +221,10 @@ function uploadFileForAddStyle(input) {
 		formData.append('file', file);
 		showLoadingBar();
 		jQuery.ajax({
-			url:"uploadFile",
+			url:"/uploadFile",
 			type:"POST",
 			dataType:"JSON",
 			data:formData,
-			// beforeSend:function(xhr){
-	        //     xhr.setRequestHeader("kind", "uploadFile");
-	        // },
 			processData:false,
 			contentType:false,
 			success: function(data, textStatus, jqXHR) {
@@ -252,7 +249,7 @@ function uploadFileForAddStyle(input) {
 					} else {
 						$(".pictureSubAddItem"+tag).css("display", "none");
 						$(".styleSubPicture"+tag).css("display", "block");
-						$(".styleSubPicture"+tag).attr("src", "file/"+fileUrl);
+						$(".styleSubPicture"+tag).attr("src", fileUrl);
 						$("#styleAddPictureUrl"+tag).val(fileUrl);
 						$(".styleSubCircleCheck"+tag).removeClass("circleCheckPress").addClass("circleCheckPress");
 					}
@@ -274,7 +271,7 @@ function drawStyleAddMainPicture() {
 	var size = styleAddPictureArray.length;
 	for(var i=0; i<size; i++) {
 		var item = styleAddPictureArray[i];
-		var pictureUrl = "file/"+item.pictureUrl;
+		var pictureUrl = item.pictureUrl;
 		var rowText = ("<div class=\"pictureMainItem pictureMainItem_"+i+" pictureMainItemExist\"><p class=\"pictureMainAddItem pictureMainAddItem_"+i+"\">+</p><img class=\"styleMainPicture styleMainPicture_"+i+"\" src=\""+pictureUrl+"\" /><img class=\"styleMainPictureDeleteButton styleMainPictureDeleteButton_"+i+"\" src=\"images/btn_delete.png\" /></div>");
 		element.append(rowText);
 	}
@@ -293,7 +290,6 @@ $(document).on("click", ".pictureMainAddItem", function() {
 		showAlert("최대 5개까지만 선택 가능합니다.");
 		return;
 	}
-	
 	for(var i=0; i<size; i++) {
 		if(selfElement.hasClass("pictureMainAddItem_" + i)) {
 			index = i;
