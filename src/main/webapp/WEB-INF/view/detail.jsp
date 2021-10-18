@@ -34,13 +34,14 @@ var nowViewCount = 100;
 			String _displayPictureUrl = "";
 			String _rowPictureUrl = _rowObject.getString("pictureUrl");
 			if(!StringUtil.isEmpty(_rowPictureUrl)) {
-				_displayPictureUrl = "file/"+_rowPictureUrl;
+				_displayPictureUrl = _rowPictureUrl;
 			}
 			
 			String _displayUserPictureUrl = "";
 			String _rowUserPictureUrl = _rowObject.getString("userPictureUrl");
 			if(!StringUtil.isEmpty(_rowUserPictureUrl)) {
-				_displayUserPictureUrl = "file/"+_rowUserPictureUrl;
+				_displayUserPictureUrl = _rowUserPictureUrl;
+				_displayPictureUrl = _rowPictureUrl;
 			} else {
 				_displayUserPictureUrl = "images/ico_person.png";
 			}
@@ -76,7 +77,7 @@ var nowViewCount = 100;
 						String _displayProductPictureUrl = "";
 						String _productPictureUrl = _productObject.getString("pictureUrl");
 						if(!StringUtil.isEmpty(_productPictureUrl)) {
-							_displayProductPictureUrl = "file/"+_productPictureUrl;
+							_displayProductPictureUrl = _productPictureUrl;
 						}
 						
 						String _isUse = _productObject.getString("isUse");

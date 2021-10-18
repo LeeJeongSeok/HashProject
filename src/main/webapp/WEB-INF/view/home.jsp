@@ -46,8 +46,7 @@ var nowViewCount = 100;
 			String _rowUserPictureUrl = _rowObject.getString("userPictureUrl");
 			if(!StringUtil.isEmpty(_rowUserPictureUrl)) {
 				System.out.println("_displayUserPictureUrl : " + _displayPictureUrl);
-				// 이부분이 이미지 경로
-				_displayUserPictureUrl = "/"+_rowUserPictureUrl;
+				_displayUserPictureUrl = _rowUserPictureUrl;
 			} else {
 				_displayUserPictureUrl = "images/ico_person.png";
 			}
@@ -82,7 +81,7 @@ var nowViewCount = 100;
 						String _displayProductPictureUrl = "";
 						String _productPictureUrl = _productObject.getString("pictureUrl");
 						if(!StringUtil.isEmpty(_productPictureUrl)) {
-							_displayProductPictureUrl = "file/"+_productPictureUrl;
+							_displayProductPictureUrl = _productPictureUrl;
 						}
 						
 						String _isUse = _productObject.getString("isUse");
