@@ -266,12 +266,12 @@ function doWriteReply() {
 		styleNo:_no,
 		content:_content
 	};
+	console.log(param);
 	jQuery.ajax({
 		type:"POST",
 		url:("/writeReply"),
-		contentType: "application/json; charset=utf-8",
 		dataType:"JSON",
-		data:JSON.stringify(param),
+		data:param,
 		timeout:20000,
 		success:function(data) {
 			hideLoadingBar();
@@ -295,9 +295,8 @@ function doGetReplyArray() {
 	jQuery.ajax({
 		type:"POST",
 		url:("/getReplyArray"),
-		contentType: "application/json; charset=utf-8",
 		dataType:"JSON",
-		data:JSON.stringify(param),
+		data:param,
 		timeout:20000,
 		success:function(data) {
 			hideLoadingBar();

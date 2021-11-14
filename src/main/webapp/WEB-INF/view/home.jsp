@@ -17,6 +17,10 @@ int _no = StringUtil.getStringNumber((String)session.getAttribute("no"));
 String _nowDate = DateUtil.getTodayDate("yyyyMMdd_HHmmss");
 JSONObject _jsonObject = AppInformationManager.getInstance().getStyleArray(_no, _categoryName, _keyword, 0, 100, "no", "DESC");
 JSONArray _jsonArray = _jsonObject.getJSONArray("styleArray");
+
+JSONObject _recommandObject = AppInformationManager.getInstance().getStyleArray(_no, _categoryName, _keyword, 0, 100, "no", "ASC");
+JSONArray _recommandObjectArray = _recommandObject.getJSONArray("styleArray");
+
 int _jsonArraySize = 0;
 if(_jsonArray != null) {
 	_jsonArraySize = _jsonArray.length();
@@ -27,6 +31,7 @@ int _totalCount = _jsonObject.getInt("totalCount");
 <script>
 var totalCount = <%= _totalCount%>;
 var array = <%= _jsonArray %>;
+var recommandArray = <%= _recommandObjectArray %>;
 var arraySize = <%= _jsonArraySize %>;
 var nowViewCount = 100;
 </script>
@@ -36,6 +41,7 @@ var nowViewCount = 100;
 	<div class="centerArea">
 		<% for(int i=0; i<_jsonArraySize; i++) {
 			JSONObject _rowObject = _jsonArray.getJSONObject(i);
+			JSONObject _recommandRowObject = _recommandObjectArray.getJSONObject(i);
 			String _displayPictureUrl = "";
 			String _rowPictureUrl = _rowObject.getString("pictureUrl");
 			if(!StringUtil.isEmpty(_rowPictureUrl)) {
@@ -63,6 +69,8 @@ var nowViewCount = 100;
 			
 			String _strProductArray = _rowObject.getString("strProductArray");
 			JSONArray _productArray = new JSONArray(_strProductArray);
+
+			String _strRecommandProductArray2 = _recommandRowObject.getString("strProductArray");
 			int _productSize = _productArray.length();
 		%>
 			<div class="homeItem">
@@ -83,7 +91,7 @@ var nowViewCount = 100;
 						if(!StringUtil.isEmpty(_productPictureUrl)) {
 							_displayProductPictureUrl = _productPictureUrl;
 						}
-						
+
 						String _isUse = _productObject.getString("isUse");
 						if("Y".equals(_isUse)) { %>
 							<div class="contentMiniRow">

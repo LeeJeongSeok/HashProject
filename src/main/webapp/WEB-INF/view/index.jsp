@@ -261,6 +261,7 @@ var replyArray = new Array();
 	</div>
 	<div class="rightArea">
 		<div class="contentRow detailContentRow"></div>
+		<%-- 추천 알고리즘 항목	시작--%>
 		<div class="userArea">
 			<div class="userRow">
 				<div class="userPicture">
@@ -268,9 +269,14 @@ var replyArray = new Array();
 				</div>
 
 				<p id="detailUserName" class="userName"></p>
-				<textarea id="detailUserDescription" readonly="readonly"></textarea>
+				<textarea id="detailUserDescription" readonly="readonly"> </textarea>
+				<br>
+				<div class="contentRow recommandContentRow">
+
+				</div>
 			</div>
 		</div>
+		<%-- 추천 알고리즘 항목	끝--%>
 		
 		<p id="detailReplyCountText" class="rowTitle">댓글</p>
 		<div class="replyArea">

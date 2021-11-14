@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -92,12 +93,12 @@ public class StyleController {
 
     @PostMapping("/updateStyleLike")
     @ResponseBody
-    public String updateStyleLike(@RequestBody StyleItem styleItem, HttpSession session) {
+    public String updateStyleLike(HttpServletRequest request, HttpSession session) {
 
         int userNo = StringUtil.getStringNumber((String)session.getAttribute("no"));
 
-        int styleNo = StringUtil.getStringNumber(Integer.toString(styleItem.getNo()));
-        String isLike = StringUtil.replaceNullForServlet(styleItem.getIsLike());
+        int styleNo = StringUtil.getStringNumber(request.getParameter("styleNo"));
+        String isLike = StringUtil.replaceNullForServlet(request.getParameter("isLike"));
         JSONObject jsonObject = AppInformationManager.getInstance().updateStyleLike(userNo, styleNo, isLike);
 
         return jsonObject.toString();

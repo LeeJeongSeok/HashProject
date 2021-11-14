@@ -75,7 +75,8 @@ $(document).on("click", ".homePicture", function(e) {
 	}
 	if(index != -1) {
 		var item = array[index];
-		showDetailPopup(item);
+		var item2 = array2[index];
+		showDetailPopup(item, item2);
 	}
 });
 
@@ -89,9 +90,8 @@ function updateStyleLike(index, _styleNo, _isLike) {
 	jQuery.ajax({
 		type:"POST",
 		url:("/updateStyleLike"),
-		contentType: "application/json; charset=utf-8",
 		dataType:"JSON",
-		data:JSON.stringify(param),
+		data:param,
 		timeout:20000,
 		success:function(data) {
 			hideLoadingBar();
@@ -166,7 +166,7 @@ $("#detailHeartCount").click(function() {
 	updateStyleLike(-1, _styleNo, _isLike);
 });
 
-function showDetailPopup(item) {
+function showDetailPopup(item, item2) {
 	nowDetailItem = item;
 	
 	closePopup();
@@ -194,6 +194,8 @@ function showDetailPopup(item) {
 			productElement.append(rowText);
 		}
 	}
+
+
 	
 	var _displayUserPictureUrl = "";
 	var _rowUserPictureUrl = item.userPictureUrl;
@@ -205,7 +207,31 @@ function showDetailPopup(item) {
 	
 	$("#detailUserPicture").attr("src", _displayUserPictureUrl);
 	$("#detailUserName").text(item.userName);
-	$("#detailUserDescription").val(item.userDescription);
+	// $("#detailUserDescription").val(item.userDescription);
+
+	/**
+	 * 코디 추천
+	 */
+	var recommandProductElement = $(".recommandContentRow");
+	recommandProductElement.empty();
+	var _productArray = JSON.parse(item2.strProductArray);
+	var _productSize = _productArray.length;
+	for(var j=0; j<_productSize; j++) {
+		var _productObject = _productArray[j];
+		var _rowTitle = _productObject.title;
+		var _displayProductPictureUrl = "";
+		var _productPictureUrl = _productObject.pictureUrl;
+		if(String(_productPictureUrl).length > 0) {
+			_displayProductPictureUrl = _productPictureUrl;
+		}
+
+		var _isUse = _productObject.isUse;
+		if(_isUse == "Y") {
+			var rowText = "<div class=\"contentMiniRow\"><img src=\""+_displayProductPictureUrl+"\" /><p>"+_rowTitle+"</p></div>";
+			recommandProductElement.append(rowText);
+		}
+	}
+
 	
 	var _isLike = item.isLike;
 	var _displayLikeImage = "images/ico_heart_off.png";
@@ -266,12 +292,12 @@ function doWriteReply() {
 		styleNo:_no,
 		content:_content
 	};
+	console.log(param);
 	jQuery.ajax({
 		type:"POST",
 		url:("/writeReply"),
-		contentType: "application/json; charset=utf-8",
 		dataType:"JSON",
-		data:JSON.stringify(param),
+		data:param,
 		timeout:20000,
 		success:function(data) {
 			hideLoadingBar();
@@ -295,9 +321,8 @@ function doGetReplyArray() {
 	jQuery.ajax({
 		type:"POST",
 		url:("/getReplyArray"),
-		contentType: "application/json; charset=utf-8",
 		dataType:"JSON",
-		data:JSON.stringify(param),
+		data:param,
 		timeout:20000,
 		success:function(data) {
 			hideLoadingBar();

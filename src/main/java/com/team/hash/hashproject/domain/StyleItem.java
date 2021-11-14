@@ -6,21 +6,22 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class StyleItem {
-    public int no = 0;
-    public String content = "";
-    public String pictureUrl = "";
-    public String strPictureUrlArray = "";
-    public String strProductArray = "";
-    public int viewCount = 0;
-    public String insertTime = "";
+    public int no;
+    public String content;
+    public String pictureUrl;
+    public String strPictureUrlArray;
+    public String strProductArray;
+    public int viewCount;
+    public String insertTime;
 
-    public int userNo = 0;
-    public String userName = "";
-    public String userPictureUrl = "";
-    public String userInstagramId = "";
-    public String userDescription = "";
-    public String isLike = "";
-    public int likeCount = 0;
+    public int userNo;
+    public String userName;
+    public String userPictureUrl;
+    public String userInstagramId;
+    public String userDescription;
+    public String isLike;
+    public int likeCount;
+
 
     public int getNo() {
         return no;
@@ -132,6 +133,26 @@ public class StyleItem {
 
     public void setLikeCount(int likeCount) {
         this.likeCount = likeCount;
+    }
+
+    @Override
+    public String toString() {
+        return "StyleItem{" +
+                "no=" + no +
+                ", content='" + content + '\'' +
+                ", pictureUrl='" + pictureUrl + '\'' +
+                ", strPictureUrlArray='" + strPictureUrlArray + '\'' +
+                ", strProductArray='" + strProductArray + '\'' +
+                ", viewCount=" + viewCount +
+                ", insertTime='" + insertTime + '\'' +
+                ", userNo=" + userNo +
+                ", userName='" + userName + '\'' +
+                ", userPictureUrl='" + userPictureUrl + '\'' +
+                ", userInstagramId='" + userInstagramId + '\'' +
+                ", userDescription='" + userDescription + '\'' +
+                ", isLike='" + isLike + '\'' +
+                ", likeCount=" + likeCount +
+                '}';
     }
 
     public JSONObject getJSONObject() throws JSONException {
