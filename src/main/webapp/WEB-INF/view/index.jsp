@@ -264,13 +264,14 @@ var replyArray = new Array();
 		<%-- 추천 알고리즘 항목	시작--%>
 		<div class="userArea">
 			<div class="userRow">
-				<div class="userPicture">
-					<img id="detailUserPicture" src=""/>
-				</div>
+<%--				<div class="userPicture">--%>
+<%--					<img id="detailUserPicture" src=""/>--%>
+<%--				</div>--%>
 
-				<p id="detailUserName" class="userName"></p>
-				<textarea id="detailUserDescription" readonly="readonly"> </textarea>
-				<br>
+<%--				<p id="detailUserName" class="userName"></p>--%>
+<%--				<textarea id="detailUserDescription" readonly="readonly"> </textarea>--%>
+<%--				<br>--%>
+					<p> 현재 보고 계신 게시물과 어울리는 색상과 매치되는 코디를 준비했어요!(개발 테스트 중)</p>
 				<div class="contentRow recommandContentRow">
 
 				</div>

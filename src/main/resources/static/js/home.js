@@ -75,7 +75,7 @@ $(document).on("click", ".homePicture", function(e) {
 	}
 	if(index != -1) {
 		var item = array[index];
-		var item2 = array2[index];
+		var item2 = recommandArray[index];
 		showDetailPopup(item, item2);
 	}
 });
